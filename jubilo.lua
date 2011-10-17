@@ -125,9 +125,9 @@ jubilo.context = function(name, func)
 	end
 end
 
-jubilo.assert = function(test, value)
+jubilo.assert = function(test, name)
 	local inContext = contextLevel > 0 and true or false
-	local string = format(value, test, contextLevel)
+	local string = format(name, test, contextLevel)
 	local result = test and true or false
 	
 	if inContext then
